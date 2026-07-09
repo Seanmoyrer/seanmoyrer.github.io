@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Share Your feedback</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<!-- our navigation bar, using nav and links to other pages -->
 <nav>
         <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
@@ -27,26 +27,28 @@
 
         </ul>
     </nav>          
-
+<!-- form container for all feedback options, including name, email, category, and feedback text area-->
     </div>
     <div class="form-container">
       <ul>
-        <h1>Feedback Form</h1>
-        
-        <form action="/submit-feedback" method="POST">
+        <h1>We Want YOUR Feedback</h1>
+        <!-- button to submit feedback, with action to submit-feedback page and method POST-->
+        <form action="thankyou.html" method="get">
 
 
-
+            <!-- text input for full name, with label and placeholder text, required field, autofocus, size and maxlength attributes -->
             <div class="form-name">
              <label id="name-label" for="name">Full Name:</label>
-             <input type="text" id="name" name="fullname" placeholder="Full Name" required autofocus>
+             <input type="text" id="name" name="fullname" placeholder="Full Name" required autofocus
+             size="30" maxlength="50">
          </div>
-
+         <!-- text input for email address, with label and placeholder text, required field, size and maxlength attributes -->
          <div class="form-email">
              <label id="email-label" for="email">Email Address:</label>
-             <input type="email" id="email" name="email" placeholder="Your Email" required>
+             <input type="email" id="email" name="email" placeholder="Your Email" required
+             size="26" maxlength="50">
          </div>
-
+         <!-- form category selection, with label and dropdown menu, required field -->
             <div class="form-category">
                 <label for="category">Feedback Category:</label>
                 <select id="category" name="category" required>
@@ -57,10 +59,10 @@
                     <option value="other">Other</option>
                 </select>
             </div>
-        
+        <!-- text area for feedback, with label and placeholder text, required field, rows and columns attributes-->
             <div class="form-feedback">
                  <label for="feedback">Share Your Thoughts</label>
-                <textarea id="feedback" rows="10" cols="60" 
+                <textarea id="feedback" rows="10" cols="80" name="feedback" 
                   placeholder="Tell us how we can improve/Give us your compliment" required></textarea>
             </div>
             <button type="submit">Submit Feedback</button>
@@ -69,6 +71,46 @@
 
         </ul>
     </div>
-   
+  
+  
 </body>
+ <!-- footer with copyright information -->
+<footer>
+
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>🍕 Lucas & Friends Pizza</h3>
+            <p>
+                Freshly baked pizzas made with passion,
+                quality ingredients, and student-friendly prices.
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>📍 Visit Us</h3>
+            <p>North Canteen</p>
+            <p>South Canteen</p>
+            <p>Koufu</p>
+            <p>Foodgle Hub</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>📞 Contact</h3>
+            <p>+65 9382 3130</p>
+            <p>LucasandFriends@gmail.com</p>
+            <p>Open Daily</p>
+            <p>8:00 AM – 8:00 PM</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        &copy; 2026 Lucas & Friends Pizza. All Rights Reserved.
+    </p>
+
+</footer>
+   
 </html>
